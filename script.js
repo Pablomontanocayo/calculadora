@@ -1,3 +1,7 @@
+const supabaseUrl = "https://oykrmlonwucburvajvqd.supabase.co";
+const supabaseKey = "sb_publishable_TnGcx8X3MQFLysiEd7yqSg_vKh9HRQR";
+const _supabase = supabase.createClient(supabaseUrl, supabaseKey)
+
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('calculator-form');
     const resultContainer = document.getElementById('result-container');
@@ -41,6 +45,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-const supabaseUrl = https://oykrmlonwucburvajvqd.supabase.co
-const supabaseKey = sb_publishable_TnGcx8X3MQFLysiEd7yqSg_vKh9HRQR
-const _supabase = supabase.createClient(supabaseUrl, supabaseKey)
+
