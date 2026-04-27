@@ -1,3 +1,5 @@
+console.log("JS cargado");
+
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('calculator-form');
     const resultContainer = document.getElementById('result-container');
