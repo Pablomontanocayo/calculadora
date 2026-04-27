@@ -1,0 +1,63 @@
+const supabaseUrl = https://oykrmlonwucburvajvqd.supabase.co
+const supabaseKey = sb_publishable_TnGcx8X3MQFLysiEd7yqSg_vKh9HRQR
+const _supabase = supabase.createClient(supabaseUrl, supabaseKey)
+
+HTML=======
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Calculadora de costos y precio de venta para emprendedores.">
+    <title>Calculadora de Precio de Venta</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="calculator-container">
+        <h1>Calculadora de Costos</h1>
+        <p class="subtitle">Calcula el precio ideal para tu producto</p>
+        
+        <form id="calculator-form">
+            <div class="input-group">
+                <label for="product-cost">Costo de mercadería ($)</label>
+                <input type="number" id="product-cost" placeholder="Ej. 1500" required min="0" step="0.01">
+            </div>
+            
+            <div class="input-group">
+                <label for="shipping-cost">Costo de transporte ($)</label>
+                <input type="number" id="shipping-cost" placeholder="Ej. 300" required min="0" step="0.01">
+            </div>
+            
+            <div class="input-group">
+                <label for="other-costs">Otros costos (empaque, etc.) ($)</label>
+                <input type="number" id="other-costs" placeholder="Ej. 100" required min="0" step="0.01">
+            </div>
+            
+            <div class="input-group">
+                <label for="profit-margin">Porcentaje de ganancia deseado (%)</label>
+                <input type="number" id="profit-margin" placeholder="Ej. 30" required min="0" step="0.01">
+            </div>
+            
+            <button type="submit" class="calculate-btn">Calcular Precio Final</button>
+        </form>
+
+        <div id="result-container" class="result-container hidden">
+            <h2>Resultados</h2>
+            <div class="result-item">
+                <span>Costos Totales:</span>
+                <span id="total-costs-display">$0.00</span>
+            </div>
+            <div class="result-item highlight">
+                <span>Precio de Venta Sugerido:</span>
+                <span id="final-price-display">$0.00</span>
+            </div>
+            <div class="result-item">
+                <span>Ganancia Neta:</span>
+                <span id="net-profit-display">$0.00</span>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
